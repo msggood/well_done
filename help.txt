@@ -1,0 +1,4 @@
+gzip -d ramdisk.image.gz && sudo mount -o loop ramdisk.image ramdisk/
+sudo umount ramdisk/ && gzip -9 ramdisk.image && mkimage -A arm -O linux -T ramdisk -C none -n "Root Filesystem" -d ./ramdisk.image.gz ./uramdisk.image.gz
+
+genext2fs -b 8192 -d rootfs rootfs.ramdisk &&gzip -9 rootfs.ramdisk && mkimage -A arm -O linux -T ramdisk -C none -n "Root Filesystem" -d ./rootfs.ramdisk.gz ./uramdisk.image.gz
