@@ -1,0 +1,25 @@
+digraph list{
+    node[shape=record,weith=.1];
+    graph [
+        rankdir = "LR"
+    ];
+    node4[label="<f0>xilinx_dma_chan|<f1>pending_list|<f2>active_list|<f3>done_list|<f4>free_seg_list"];
+
+    node0[label="<f0>xilinx_dma_tx_descriptor|<f1> async_tx|<f2> segments|<f3> node|<f4> cyclic"];
+
+    "node4":f1->"node0":f3
+
+    node1[label="<f0>xilinx_axidma_tx_segment|<f1>hw|<f2>node|<f3>phys"];
+    "node0":f2->"node1":f2
+
+    node2[label="<f0>xilinx_axidma_tx_segment|<f1>hw|<f2>node|<f3>phys"];
+    node3[label="<f0>xilinx_axidma_tx_segment|<f1>hw|<f2>node|<f3>phys"];
+
+    "node1":f2->"node0":f2
+    "node1":f2->"node2":f2
+    "node2":f2->"node1":f2
+    "node2":f2->"node3":f2
+    "node3":f2->"node2":f2
+
+    
+}

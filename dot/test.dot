@@ -1,0 +1,9 @@
+digraph list
+{
+    node[shape=record];
+    rankdir=LR;
+    c[label="<0>cc|<1>dd"]
+    d[label="<0>ee|<1>ff"];
+    c:0->d
+    a->b;
+}

@@ -1,0 +1,3 @@
+syn keyword CTagsFunction main
+syn keyword CTagsDefinedName NO_LAYOUT_OR_RENDERING
+

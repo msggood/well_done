@@ -1,0 +1,3 @@
+syn keyword CTagsFunction main setnonblocking lt perr_exit start_ser addfd
+syn keyword CTagsDefinedName false MAX_EVENT_NUM BUFFER_SIZE true
+
